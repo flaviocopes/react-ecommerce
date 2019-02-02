@@ -52,7 +52,7 @@ const App = () => {
 
   return (
     <Router>
-      <div id="app">
+      <div id='app'>
         <aside>
           <Link to={`/`}>Products</Link>
           <Link to={`/add-product`}>Add product</Link>
@@ -62,7 +62,7 @@ const App = () => {
           <Cart cart={cart} />
           <Route
             exact
-            path="/"
+            path='/'
             render={({ history }) => (
               <ProductsList
                 products={products}
@@ -72,13 +72,13 @@ const App = () => {
             )}
           />
           <Route
-            path="/add-product"
+            path='/add-product'
             render={({ history }) => (
               <AddProduct addProduct={addProduct} history={history} />
             )}
           />
           <Route
-            path="/product/:slug"
+            path='/product/:slug'
             render={({ match }) => (
               <SingleProduct
                 product={products.find(p => p.slug === match.params.slug)}
